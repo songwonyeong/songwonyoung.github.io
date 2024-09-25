@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>푸드&주류트럭</title>
+  <link rel="stylesheet" href="food.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+   
+  <header>
+    <img src="../images/logo.png" alt="로고" class="logo">
+
+    <div class="menu-icon">☰</div>
+  </header>
+
+  <div class="menu" id="menu"> <!-- id 추가 -->
+    <ul>
+      <li><a href="../jb/index.html">홈</a></li>
+      <li><a href="../map,event/map,event.html">지도 및 부스 안내</a></li>
+      <li><a href="../EVENTS_/index.html">이벤트</a></li>
+      <li><a href="../performance/performance.html">무대 프로그램</a></li>
+      <li><a href="../food/food.html">푸드&주류 트럭</a></li>
+      <li><a href="../BUS/index.html">셔틀버스</a></li>
+      <!-- <li><a href="../notice/notice.php">게시판</a></li> -->
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <!-- 푸드트럭 박스 -->
+      <div class="box" id="foodtruck">
+        <div class="image-wrapper">
+          <img src="../images/푸드트럭 이미지.jpg" alt="푸드트럭" class="box-image">
+          <div class="overlay"></div>
+          <div class="box-title">푸드트럭</div>
+          <div class="box-footer">
+            <p>이용기간 : 2024. 09.25 - 26, 10:00~23:00 (변동가능)</p>
+            <p>주의사항 : 쓰레기는 배치되어 있는 쓰레기통에 버려주세요.</p>
+          </div>
+          <div class="box-toggle" id="toggle-btn">
+            <span>▼</span>
+          </div>
+        </div>
+        <div class="box-content">
+          <div class="inner-box">
+            <h4>MENU</h4>
+            <div class="menu-item">구슬아이스크림, 커피, 음료 4,000원</div>
+            <div class="menu-item">분식 4,000원</div>
+            <div class="menu-item">닭꼬치 5,000원</div>
+            <div class="menu-item">츄러스, 회오리감자 5,000원</div>
+            <div class="menu-item">초밥 10,000원</div>
+            <div class="menu-item">닭강정 10,000원</div>
+            <div class="menu-item">야끼소바 10,000원</div>
+            <div class="menu-item">삼겹살(set) 10,000원</div>
+            <div class="menu-item">곱창 13,000원</div>
+            <div class="menu-item">스테이크(쉬림프) 12,000원(17,000원)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 주류 박스 -->
+      <div class="box">
+        <div class="image-wrapper">
+          <img src="../images/맥주 이미지.jpg" alt="주류" class="box-image">
+          <div class="overlay"></div>
+          <div class="box-title">주류</div>
+          <div class="box-footer">
+            <p>이용기간 : 2024.09.25-26, 18:00~23:00 (변동가능)</p>
+            <p>주의사항 : 구매시 신분증 필수 지참</p>
+          </div>
+          <div class="box-toggle">
+            <span>▼</span>
+          </div>
+        </div>
+        <div class="box-content">
+          <div class="inner-box">
+            <p>- 주류트럭에서 소주는 팔지 않고, 맥주만 판매</p>
+            <p>- 줄 트럭에서 맥주 1잔을 구매하면 몬스터 1캔으로 교환해 주는 쿠폰을 증정<br>(몬스터 재고 소진 시 조기마감 될 수 있다.)</p>
+            <p>- 소주를 마시고 싶은 학우분들은 인근 마트 또는 편의점에서 별도로 구매 부탁드립니다.</p>
+            <p>- 축제가 하루 남은 시점 갑작스러운 일로 소주 판매가 불가한 점 죄송합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 테이블 박스 -->
+      <div class="box">
+        <div class="image-wrapper">
+          <img src="../images/테이블 이미지 2.jpg" alt="테이블" class="box-image">
+          <div class="overlay"></div>
+          <div class="box-title">테이블</div>
+          <div class="box-footer">
+            <p>이용기간 : 2024.09.25-26, 18:00~22:00</p>
+            <p>주의사항 : 다음 이용객을 위해 깔끔한 뒷정리 부탁드립니다. 테이블 이동은 금지되어 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="food.js"></script>
+</body>
+</html>

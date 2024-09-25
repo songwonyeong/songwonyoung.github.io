@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('..//images/back.png'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: Makes the background stay fixed when scrolling */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* 헤더 스타일 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #8a0017;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 70px;
+  }
+  
+  header img {
+    width: 50px;
+  }
+  
+  header h1 {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #8a0017;
+  }
+
+.logo {
+    width: 50px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+}
+
+.menu-icon div {
+    height: 4px;
+    background-color: #b10a14;
+    margin: 3px 0;
+}
+
+h1 {
+    position: relative;
+    margin: 100px 0px 20px 0px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: block;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100%; /* Set the length of the underline here */
+    height: 2px;
+    background-color: white;
+    margin-top: 5px;
+}
+
+.schedule-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.schedule-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.business-card-image {
+    display: block;
+    margin: 20px auto; 
+    max-width: 100%; 
+    height: auto; 
+}
+
+.schedule-box p {
+    margin: 10px 0;
+}
+
+.schedule {
+    border: 2px solid white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.schedule-box p.date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 18px ;
+}
+
+.schedule-box p.date::before, .schedule-box p.date::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background-color: white;
+}
+
+.schedule-box p.date::before {
+    margin-right: 10px; /* 선과 텍스트 사이 간격 */
+}
+
+.schedule-box p.date::after {
+    margin-left: 10px; /* 선과 텍스트 사이 간격 */
+}
+
+.prize-box {
+    background-color: rgba(190, 190, 190, 0.4); 
+    border: 2px solid white;
+    padding: 0px; /* 내부 여백 */
+    margin: 20px 0; /* 상하 여백 */
+    border-radius: 10px; 
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #8a0017;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 150;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}

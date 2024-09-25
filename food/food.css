@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    font-family: 'Noto Sans KR', sans-serif; /* 전체 폰트 설정 */
+    background-color: #0A112B;
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 수평 가운데 정렬 */
+    min-height: 100vh; /* 최소 높이 설정 */
+  }
+  
+  /* 헤더 스타일 */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #8a0017;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 70px;
+  }
+  
+  header img {
+    width: 50px;
+  }
+  
+  header h1 {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #8a0017;
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #8a0017;
+    cursor: pointer;
+  }
+  
+  .content {
+    margin-top: 85px; /* 헤더 높이 + 여유 공간 */
+    display: flex;
+    justify-content: center; /* 수평 가운데 정렬 */
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    align-items: center; /* 수평 가운데 정렬 */
+  }
+  
+  .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .box-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .box-title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    white-space: nowrap; /* 줄 바꿈 금지 */
+    font-size: 3em;
+    font-weight: 100;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+  
+  .box-footer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    z-index: 2;
+  }
+  
+  .box-toggle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 2;
+    color: white;
+  }
+  
+  .box-content {
+    padding: 10px;
+    background-color: #2C1A5E;
+    color: white;
+    border: 1px solid #EED2FF;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center; /* 내용 가운데 정렬 */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0s 0.5s; /* visibility를 나중에 변경 */
+  }
+  
+  .box-content.show {
+    display: block; 
+    margin-bottom: 20px;
+    max-height: 500px; /* 최대 높이 설정 */
+    opacity: 1;
+    visibility: visible; /* visibility를 보여줌 */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  
+  .box-content h4 {
+    font-size: 3em; /* 제목 글자 크기 */
+    font-weight: 100; /* 얇은 글씨체 */
+    text-align: center; /* 가운데 정렬 */
+    margin-bottom: 15px; /* 제목과 메뉴 간격 조정 */
+  }
+  
+  
+  .inner-box {
+    padding: 10px; /* 안쪽 여백 */
+    background-color: #2C1A5E; /* 배경색 */
+    border: 2px solid #EED2FF; /* 안쪽 테두리 색상과 두께 */
+  }
+  
+  .menu-item {
+    margin-bottom: 10px;
+    color: white; /* 메뉴 텍스트 색상 */
+  }
+  
+  h4 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  @keyframes toggleAnimation {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 500px;
+      opacity: 1;
+    }
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #8a0017;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 150;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .menu li {
+    margin: 20px 0;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }

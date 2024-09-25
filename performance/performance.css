@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #0A112B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #8a0017;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 70px;
+  }
+  
+  header img {
+    width: 50px;
+  }
+  
+  header h1 {
+    font-size: 20px;
+    margin-left: 10px;
+    color: #8a0017;
+  }
+  
+  .menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #8a0017;
+    cursor: pointer;
+  }
+
+  .content {
+    margin-top: 85px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    align-items: center;
+  }
+  
+  .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .box-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .box-title {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    white-space: nowrap; /* 줄 바꿈 금지 */
+    font-size: 2.5em;
+    font-weight: 100;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+  
+  .box-footer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    z-index: 2;
+  }
+  
+  .box-toggle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 2;
+    color: white;
+  }
+  
+  .box-content {
+    padding: 10px;
+    background-color: #2C1A5E;
+    color: white;
+    border: 1px solid #EED2FF;
+
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0s 0.5s;
+}
+  
+  .box-content.show {
+    max-height: 1000px; /* 충분히 큰 값으로 설정 */
+    opacity: 1;
+    margin-bottom: 20px;
+    visibility: visible;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  }
+  
+  
+  .inner-box {
+    padding: 10px;
+    background-color: #2C1A5E;
+  }
+  
+  .menu-item {
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+
+  @keyframes toggleAnimation {
+    from {
+      max-height: 0;
+      opacity: 0;
+    }
+    to {
+      max-height: 500px;
+      opacity: 1;
+    }
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #8a0017;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 150;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .menu li {
+    margin: 20px 0;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
