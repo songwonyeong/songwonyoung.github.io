@@ -18,6 +18,23 @@ body {
     text-align: center;
     height: 100vh;
     overflow: hidden;
+    position: relative; /* 가상 요소를 올리기 위해 필요 */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* 어두운 오버레이 (0.5는 투명도) */
+    z-index: 1; /* 콘텐츠 위에 올라가지 않도록 설정 */
+}
+
+.main-content, header {
+    position: relative;
+    z-index: 2; /* 가상 요소보다 위에 보이도록 설정 */
 }
 
 /* 상단바 스타일 */
@@ -77,7 +94,7 @@ header {
     font-size: 18px;
     width: 70%;
     transition: background-color 0.3s;
-    background-color: rgba(0, 0, 0, 0.6); 
+
 }
 
 .button:hover {
