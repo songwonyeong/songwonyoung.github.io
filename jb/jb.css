@@ -44,7 +44,7 @@ header {
 /* 메인 콘텐츠 스타일 */
 .main-content {
     position: relative;
-    top: 55%;
+    top: 50%;
     transform: translateY(-50%);
     
 }
@@ -63,6 +63,7 @@ header {
    
     display: flex;
     flex-direction: column;
+    
 }
 
 .button {
@@ -76,6 +77,7 @@ header {
     font-size: 18px;
     width: 70%;
     transition: background-color 0.3s;
+    background-color: rgba(0, 0, 0, 0.6); 
 }
 
 .button:hover {
